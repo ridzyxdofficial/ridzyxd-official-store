@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>RidzyXD Official Store</title>
+
+  <meta
+    name="description"
+    content="Layanan digital terpercaya dengan harga terjangkau, proses cepat, full pengajaran, dan bonus menarik."
+  >
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --bg: #060914;
+      --bg-soft: #0b1020;
+      --card: rgba(15, 23, 42, 0.82);
+      --card-light: rgba(24, 35, 60, 0.7);
+      --blue: #3b82f6;
+      --cyan: #22d3ee;
+      --purple: #8b5cf6;
+      --green: #22c55e;
+      --text: #f8fbff;
+      --muted: #9aa8c0;
+      --border: rgba(148, 190, 255, 0.14);
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    body {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 5%, rgba(59, 130, 246, 0.16), transparent 27%),
+        radial-gradient(circle at 90% 20%, rgba(139, 92, 246, 0.12), transparent 25%),
+        linear-gradient(180deg, #060914 0%, #090d19 50%, #060914 100%);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      opacity: 0.25;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 38px 38px;
+      mask-image: linear-gradient(to bottom, black, transparent 75%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1140px, 92%);
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+      background: rgba(6, 9, 20, 0.8);
+      backdrop-filter: blur(18px);
+    }
+
+    nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .brand-icon {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      box-shadow: 0 10px 28px rgba(59, 130, 246, 0.3);
+    }
+
+    .brand span:last-child {
+      color: var(--cyan);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .nav-links a {
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-button {
+      padding: 11px 17px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 650px;
+      display: grid;
+      place-items: center;
+      padding: 95px 0 75px;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      text-align: center;
+      animation: appear 0.8s ease both;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 15px;
+      margin-bottom: 25px;
+      border-radius: 100px;
+      border: 1px solid rgba(34, 211, 238, 0.2);
+      background: rgba(34, 211, 238, 0.06);
+      color: #c7f8ff;
+      font-size: 12px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 12px var(--green);
+      animation: pulse 1.6s infinite;
+    }
+
+    @keyframes pulse {
+      50% {
+        opacity: 0.35;
+      }
+    }
+
+    .hero h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(43px, 8vw, 82px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+      margin-bottom: 23px;
+    }
+
+    .hero h1 span {
+      display: block;
+      background: linear-gradient(
+        90deg,
+        #60a5fa,
+        #22d3ee,
+        #a78bfa
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: auto;
+      color: var(--muted);
+      line-height: 1.85;
+      font-size: 15px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 15px 22px;
+      border-radius: 14px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: 0.25s;
+    }
+
+    .button-primary {
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      box-shadow: 0 13px 35px rgba(59, 130, 246, 0.28);
+    }
+
+    .button-primary:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 42px rgba(59, 130, 246, 0.4);
+    }
+
+    .button-secondary {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.035);
+    }
+
+    .button-secondary:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.07);
+    }
+
+    /* BENEFITS */
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-top: -22px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .benefit {
+      padding: 21px 17px;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(12, 18, 35, 0.82);
+      backdrop-filter: blur(12px);
+      transition: 0.25s;
+    }
+
+    .benefit:hover {
+      transform: translateY(-5px);
+      border-color: rgba(96, 165, 250, 0.35);
+      box-shadow: 0 15px 35px rgba(0,0,0,.22);
+    }
+
+    .benefit-icon {
+      width: 43px;
+      height: 43px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: rgba(59, 130, 246, 0.1);
+      font-size: 19px;
+    }
+
+    .benefit strong {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .benefit span {
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    /* SECTION */
+
+    section {
+      padding: 105px 0;
+    }
+
+    .section-title {
+      max-width: 680px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--cyan);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 13px;
+    }
+
+    .section-title h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(31px, 5vw, 48px);
+      margin-bottom: 14px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    /* SERVICES */
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service {
+      position: relative;
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: 21px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(20, 30, 55, 0.85),
+          rgba(8, 13, 27, 0.9)
+        );
+      overflow: hidden;
+      transition: 0.28s;
+    }
+
+    .service:hover {
+      transform: translateY(-7px);
+      border-color: rgba(96, 165, 250, 0.38);
+      box-shadow: var(--shadow);
+    }
+
+    .service-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .service-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(96, 165, 250, 0.13);
+      font-size: 24px;
+    }
+
+    .price {
+      padding: 8px 10px;
+      border-radius: 10px;
+      color: #bff8ff;
+      background: rgba(34, 211, 238, 0.08);
+      border: 1px solid rgba(34, 211, 238, 0.13);
+      font-size: 10px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .service h3 {
+      margin: 19px 0 9px;
+      font-size: 18px;
+    }
+
+    .service p {
+      min-height: 63px;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.75;
+    }
+
+    .service-button {
+      width: 100%;
+      display: block;
+      margin-top: 20px;
+      padding: 12px;
+      text-align: center;
+      border-radius: 12px;
+      background: rgba(59, 130, 246, 0.09);
+      border: 1px solid rgba(96, 165, 250, 0.14);
+      color: #d8f5ff;
+      font-size: 11px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .service-button:hover {
+      background: linear-gradient(
+        135deg,
+        rgba(59, 130, 246, 0.25),
+        rgba(139, 92, 246, 0.2)
+      );
+    }
+
+    /* ABOUT */
+
+    .about-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      padding: 35px;
+      border-radius: 25px;
+      border: 1px solid var(--border);
+      background: rgba(11, 17, 34, 0.78);
+    }
+
+    .about-box h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 38px;
+      margin-bottom: 17px;
+    }
+
+    .about-box p {
+      color: var(--muted);
+      line-height: 1.85;
+      font-size: 14px;
+    }
+
+    .about-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .about-item {
+      padding: 17px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.025);
+    }
+
+    .about-item b {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 13px;
+    }
+
+    .about-item span {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    /* FAQ */
+
+    .faq {
+      max-width: 820px;
+      margin: auto;
+      display: grid;
+      gap: 12px;
+    }
+
+    details {
+      padding: 19px 20px;
+      border-radius: 15px;
+      border: 1px solid var(--border);
+      background: rgba(12, 18, 35, 0.78);
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    summary::after {
+      content: "+";
+      float: right;
+      color: var(--cyan);
+      font-size: 19px;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      padding-top: 14px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.75;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      padding: 40px;
+      border-radius: 25px;
+      border: 1px solid rgba(96, 165, 250, 0.2);
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          rgba(59, 130, 246, 0.15),
+          transparent 35%
+        ),
+        rgba(10, 16, 33, 0.92);
+    }
+
+    .contact h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 40px;
+      margin-bottom: 13px;
+    }
+
+    .contact p {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 13px;
+    }
+
+    .contact-info {
+      display: grid;
+      gap: 12px;
+    }
+
+    .contact-card {
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .contact-card-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: rgba(59, 130, 246, 0.1);
+    }
+
+    .contact-card strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 12px;
+    }
+
+    .contact-card span {
+      color: var(--muted);
+      font-size: 10px;
+      word-break: break-all;
+    }
+
+    /* FLOAT BUTTON */
+
+    .whatsapp {
+      position: fixed;
+      right: 19px;
+      bottom: 19px;
+      z-index: 99;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #25d366, #16a85a);
+      box-shadow: 0 12px 32px rgba(37, 211, 102, 0.35);
+      font-size: 25px;
+      transition: 0.25s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    footer {
+      margin-top: 75px;
+      padding: 34px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      text-align: center;
+      font-size: 11px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .benefits {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+
+      .about-box,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 590px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .brand {
+        font-size: 13px;
+      }
+
+      .brand-icon {
+        width: 38px;
+        height: 38px;
+      }
+
+      .nav-button {
+        padding: 10px 11px;
+        font-size: 10px;
+      }
+
+      .services,
+      .benefits {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      section {
+        padding: 78px 0;
+      }
+
+      .about-box,
+      .contact {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="container">
+
+    <a href="#beranda" class="brand">
+      <span class="brand-icon">⚡</span>
+      RIDZYXD <span>STORE</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#beranda">Beranda</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#faq">FAQ</a>
+    </div>
+
+    <a href="#kontak" class="nav-button">
+      HUBUNGI ADMIN
+    </a>
+
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero" id="beranda">
+
+    <div class="container hero-content">
+
+      <div class="status">
+        <span class="status-dot"></span>
+        LAYANAN DIGITAL TERSEDIA
+      </div>
+
+      <h1>
+        RIDZYXD
+        <span>OFFICIAL STORE</span>
+      </h1>
+
+      <p>
+        Berbagai kebutuhan layanan digital dalam satu tempat,
+        dengan harga terjangkau, proses cepat, full pengajaran,
+        dan bonus menarik.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#layanan" class="button button-primary">
+          ⚡ LIHAT LAYANAN
+        </a>
+
+        <a
+          href="https://wa.me/62895392338445"
+          target="_blank"
+          class="button button-secondary"
+        >
+          💬 CHAT ADMIN
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <div class="container">
+
+    <div class="benefits">
+
+      <div class="benefit">
+        <div class="benefit-icon">💰</div>
+        <div>
+          <strong>Harga Terjangkau</strong>
+          <span>Mulai dari harga hemat</span>
+        </div>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-icon">⚡</div>
+        <div>
+          <strong>Proses Cepat</strong>
+          <span>Diproses sesuai antrean</span>
+        </div>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-icon">📚</div>
+        <div>
+          <strong>Full Pengajaran</strong>
+          <span>Dibantu sampai memahami</span>
+        </div>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-icon">🎁</div>
+        <div>
+          <strong>Bonus Menarik</strong>
+          <span>Bonus sesuai promo</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <section id="layanan">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <div class="eyebrow">
+          DIGITAL SERVICES
+        </div>
+
+        <h2>
+          Layanan Kami
+        </h2>
+
+        <p>
+          Harga di bawah merupakan harga sementara.
+          Hubungi admin untuk informasi terbaru.
+        </p>
+
+      </div>
+
+      <div class="services">
+
+        <article class="service">
+
+          <div class="service-top">
+            <div class="service-icon">🖥️</div>
+            <div class="price">Mulai Rp1.000</div>
+          </div>
+
+          <h3>Panel</h3>
+
+          <p>
+            Panel untuk menjalankan bot dan project digital
+            sesuai pilihan paket.
+          </p>
+
+          <a
+            href="https://wa.me/62895392338445"
+            target="_blank"
+            class="service-button"
+          >
+            PESAN SEKARANG
+          </a>
+
+        </article>
+
+        <article class="service">
+
+          <div class="service-top">
+            <div class="service-icon">🤖</div>
+            <div class="price">Mulai Rp5.000</div>
+          </div>
+
+          <h3>Sewa Bot</h3>
+
+          <p>
+            Layanan sewa bot WhatsApp sesuai kebutuhan
+            dan pilihan durasi.
+          </p>
+
+          <a
+            href="https://wa.me/62895392338445"
+            target="_blank"
+            class="service-button"
+          >
+            PESAN SEKARANG
+          </a>
+
+        </article>
+
+        <article class="service">
+
+          <div class="service-top">
+            <div class="service-icon">⚙️</div>
+            <div class="price">Mulai Rp10.000</div>
+          </div>
+
+          <h3>Jadi Bot</h3>
+
+          <p>
+            Bantuan pemasangan dan pengaturan bot
+            sesuai kebutuhan.
+          </p>
+
+          <a
+            href="https://wa.me/62895392338445"
+            target="_blank"
+            class="service-button"
+          >
+            PESAN SEKARANG
+          </a>
+
+        </article>
+
+        <article class="service">
+
+          <div class="service-top">
+            <div class="service-icon">📱</div>
+            <div class="price">Mulai Rp5.000</div>
+          </div>
+
+          <h3>Nokos WA</h3>
+
+          <p>
+            Informasi layanan nomor kosong WhatsApp
+            sesuai ketersediaan.
+          </p>
+
+          <a
+            href="https://wa.me/62895392338445"
+            target="_blank"
+            class="service-button"
+          >
+            TANYA ADMIN
+          </a>
+
+        </article>
+
+        <article class="service">
+
+          <div class="service-top">
+            <div class="service-icon">🛠️</div>
+            <div class="price">Mulai Rp5.000</div>
+          </div>
+
+          <h3>Jasbug</h3>
+
+          <p>
+            Bantuan perbaikan error dan masalah
+            pada bot atau project.
+          </p>
+
+          <a
+            href="https://wa.me/62895392338445"
+            target="_blank"
+            class="service-button"
+          >
+            PESAN SEKARANG
+          </a>
+
+        </article>
+
+        <article class="service">
+
+          <div class="service-top">
+            <div class="service-icon">📈</div>
+            <div class="price">Mulai Rp2.000</div>
+          </div>
+
+          <h3>Suntik Sosmed</h3>
+
+          <p>
+            Layanan peningkatan interaksi media sosial
+            sesuai pilihan yang tersedia.
+          </p>
+
+          <a
+            href="https://wa.me/62895392338445"
+            target="_blank"
+            class="service-button"
+          >
+            TANYA ADMIN
+          </a>
+
+        </article>
+
+        <article class="service">
+
+          <div class="service-top">
+            <div class="service-icon">🎮</div>
+            <div class="price">Mulai Rp5.000</div>
+          </div>
+
+          <h3>Top Up Game</h3>
+
+          <p>
+            Top up berbagai game dengan proses
+            praktis dan mudah.
+          </p>
+
+          <a
+            href="https://wa.me/62895392338445"
+            target="_blank"
+            class="service-button"
+          >
+            TOP UP SEKARANG
+          </a>
+
+        </article>
+
+        <article class="service">
+
+          <div class="service-top">
+            <div class="service-icon">💎</div>
+            <div class="price">Mulai Rp3.000</div>
+          </div>
+
+          <h3>Aplikasi Premium</h3>
+
+          <p>
+            Berbagai pilihan aplikasi premium
+            sesuai stok dan ketersediaan.
+          </p>
+
+          <a
+            href="https://wa.me/62895392338445"
+            target="_blank"
+            class="service-button"
+          >
+            LIHAT PRODUK
+          </a>
+
+        </article>
+
+        <article class="service">
+
+          <div class="service-top">
+            <div class="service-icon">🎬</div>
+            <div class="price">Mulai Rp5.000</div>
+          </div>
+
+          <h3>Editor</h3>
+
+          <p>
+            Jasa editing sesuai kebutuhan,
+            mulai dari konten hingga project digital.
+          </p>
+
+          <a
+            href="https://wa.me/62895392338445"
+            target="_blank"
+            class="service-button"
+          >
+            PESAN EDITOR
+          </a>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="tentang">
+
+    <div class="container">
+
+      <div class="about-box">
+
+        <div>
+
+          <div class="eyebrow">
+            TENTANG KAMI
+          </div>
+
+          <h2>
+            RidzyXD Store
+          </h2>
+
+          <p>
+            RidzyXD Official Store menyediakan berbagai
+            kebutuhan layanan digital dalam satu tempat.
+            Layanan akan terus dikembangkan dan ditambahkan
+            secara bertahap.
+          </p>
+
+        </div>
+
+        <div class="about-list">
+
+          <div class="about-item">
+            <b>⚡ Proses Mudah</b>
+            <span>
+              Hubungi admin dan jelaskan kebutuhan Anda.
+            </span>
+          </div>
+
+          <div class="about-item">
+            <b>📚 Full Pengajaran</b>
+            <span>
+              Pengguna akan dibantu memahami proses layanan.
+            </span>
+          </div>
+
+          <div class="about-item">
+            <b>🎁 Bonus Menarik</b>
+            <span>
+              Bonus dapat tersedia sesuai promo dan layanan.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="faq">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <div class="eyebrow">
+          INFORMATION
+        </div>
+
+        <h2>
+          Pertanyaan Umum
+        </h2>
+
+        <p>
+          Informasi singkat sebelum melakukan pemesanan.
+        </p>
+
+      </div>
+
+      <div class="faq">
+
+        <details>
+
+          <summary>
+            Bagaimana cara melakukan pembayaran?
+          </summary>
+
+          <p>
+            Hubungi admin terlebih dahulu. Admin akan memberikan
+            informasi total pembayaran dan metode pembayaran
+            yang tersedia.
+          </p>
+
+        </details>
+
+        <details>
+
+          <summary>
+            Berapa lama proses pengiriman produk?
+          </summary>
+
+          <p>
+            Waktu proses bergantung pada jenis produk,
+            ketersediaan, dan jumlah antrean.
+            Admin akan memberikan perkiraan waktu setelah pesanan diperiksa.
+          </p>
+
+        </details>
+
+        <details>
+
+          <summary>
+            Apakah ada garansi untuk produk yang dibeli?
+          </summary>
+
+          <p>
+            Garansi dapat berbeda pada setiap produk atau layanan.
+            Tanyakan ketentuan garansi kepada admin sebelum membeli.
+          </p>
+
+        </details>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="kontak">
+
+    <div class="container">
+
+      <div class="contact">
+
+        <div>
+
+          <div class="eyebrow">
+            HUBUNGI KAMI
+          </div>
+
+          <h2>
+            Butuh Bantuan?
+          </h2>
+
+          <p>
+            Hubungi admin untuk bertanya, melihat harga terbaru,
+            atau melakukan pemesanan.
+          </p>
+
+          <br>
+
+          <a
+            href="https://wa.me/62895392338445"
+            target="_blank"
+            class="button button-primary"
+          >
+            💬 CHAT WHATSAPP
+          </a>
+
+        </div>
+
+        <div class="contact-info">
+
+          <a
+            href="https://wa.me/62895392338445"
+            target="_blank"
+            class="contact-card"
+          >
+
+            <div class="contact-card-icon">
+              💬
+            </div>
+
+            <div>
+              <strong>WhatsApp Admin</strong>
+              <span>
+                Klik untuk menghubungi admin
+              </span>
+            </div>
+
+          </a>
+
+          <a
+            href="mailto:ridzyofficial338@gmail.com"
+            class="contact-card"
+          >
+
+            <div class="contact-card-icon">
+              📧
+            </div>
+
+            <div>
+              <strong>Gmail</strong>
+              <span>
+                ridzyofficial338@gmail.com
+              </span>
+            </div>
+
+          </a>
+
+          <div class="contact-card">
+
+            <div class="contact-card-icon">
+              🟢
+            </div>
+
+            <div>
+              <strong>Status Layanan</strong>
+              <span>
+                Support tersedia 24/7
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<a
+  href="https://wa.me/62895392338445"
+  target="_blank"
+  class="whatsapp"
+  aria-label="Chat WhatsApp"
+>
+  💬
+</a>
+
+<footer>
+  © 2026 RIDZYXD OFFICIAL STORE • ALL RIGHTS RESERVED
+</footer>
+
+</body>
+  </html>
