@@ -1,61 +1,59 @@
-import { Phone, Mail, MessageCircle } from "lucide-react";
+const products = [
+  "Panel Pterodactyl",
+  "Sewa Bot WhatsApp",
+  "Jadi Bot WhatsApp",
+  "Top Up Game",
+  "Nokos WhatsApp",
+  "Jasbug WhatsApp",
+  "Suntik Sosmed",
+  "Aplikasi Premium"
+];
 
 export const metadata = {
-  title: "Contact | RidzyXD Official Store",
+  title: "Products | RidzyXD Official Store",
 };
 
-export default function ContactPage() {
+export default function ProductsPage() {
   return (
     <main className="min-h-screen px-6 py-24">
 
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
 
         <h1 className="title">
-          Contact
+          Semua Produk
         </h1>
 
-        <div className="grid md:grid-cols-2 gap-6 mt-10">
+        <p className="subtitle">
+          Pilih layanan yang kamu butuhkan.
+        </p>
 
-          <div className="card p-8">
+        <div className="grid md:grid-cols-4 gap-6 mt-10">
 
-            <Phone className="text-cyan-400"/>
+          {products.map((item) => (
 
-            <h2 className="text-2xl font-bold mt-4">
-              WhatsApp
-            </h2>
-
-            <p className="mt-2">
-              0895392338445
-            </p>
-
-            <a
-              href="https://wa.me/62895392338445"
-              className="btn btn-primary inline-block mt-6"
+            <div
+              key={item}
+              className="card p-6"
             >
-              Chat Sekarang
-            </a>
 
-          </div>
+              <h2 className="text-xl font-bold">
+                {item}
+              </h2>
 
-          <div className="card p-8">
+              <p className="text-gray-400 mt-3">
+                Harga akan ditambahkan nanti.
+              </p>
 
-            <Mail className="text-cyan-400"/>
+              <a
+                href="https://wa.me/62895392338445"
+                className="btn btn-primary inline-block mt-6"
+              >
+                Order
+              </a>
 
-            <h2 className="text-2xl font-bold mt-4">
-              Email
-            </h2>
+            </div>
 
-            <p className="mt-2">
-              ridzyofficial338@gmail.com
-            </p>
-
-            <MessageCircle className="mt-6 text-green-500"/>
-
-            <p className="text-gray-400 mt-3">
-              Fast Response 24 Jam
-            </p>
-
-          </div>
+          ))}
 
         </div>
 
