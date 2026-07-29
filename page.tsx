@@ -1,25 +1,48 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Announcement from "@/components/Announcement";
-import Services from "@/components/Services";
-import Stats from "@/components/Stats";
-import Testimonial from "@/components/Testimonial";
-import Faq from "@/components/Faq";
-import Footer from "@/components/Footer";
-import FloatingWhatsapp from "@/components/FloatingWhatsapp";
+export const metadata = {
+  title: "Tentang Kami | RidzyXD Official Store",
+};
 
-export default function Home() {
+export default function AboutPage() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <Announcement />
-      <Services />
-      <Stats />
-      <Testimonial />
-      <Faq />
-      <Footer />
-      <FloatingWhatsapp />
-    </>
+    <main className="min-h-screen px-6 py-24">
+
+      <div className="max-w-6xl mx-auto">
+
+        <h1 className="title">
+          Tentang Kami
+        </h1>
+
+        <p className="subtitle">
+          Digital Marketplace Indonesia
+        </p>
+
+        <div className="card p-8 mt-10">
+
+          <p className="leading-8 text-gray-300">
+
+            RidzyXD Official Store merupakan layanan digital yang menyediakan
+            berbagai kebutuhan digital seperti Panel Pterodactyl,
+            Sewa Bot WhatsApp, Jadi Bot, Nokos WhatsApp,
+            Suntik Sosmed, Top Up Game,
+            Jasbug hingga Aplikasi Premium.
+
+          </p>
+
+          <br/>
+
+          <p className="leading-8 text-gray-300">
+
+            Kami berkomitmen memberikan pelayanan terbaik,
+            proses cepat,
+            harga bersaing,
+            serta dukungan pelanggan setiap hari.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </main>
   );
 }
