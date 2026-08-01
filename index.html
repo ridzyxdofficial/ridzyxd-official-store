@@ -1,0 +1,4656 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="RidzyXD Official Store - layanan digital lengkap dengan harga terjangkau."
+  >
+
+  <title>RidzyXD Official Store</title>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap");
+
+    :root {
+      --bg: #060914;
+      --bg2: #0b1020;
+      --card: rgba(14, 21, 40, 0.88);
+
+      --blue: #3b82f6;
+      --cyan: #22d3ee;
+      --purple: #8b5cf6;
+      --green: #22c55e;
+
+      --text: #f8fbff;
+      --muted: #9aa8c0;
+      --border: rgba(148, 190, 255, 0.14);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: var(--text);
+
+      background:
+        radial-gradient(
+          circle at 8% 4%,
+          rgba(59, 130, 246, 0.16),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 92% 15%,
+          rgba(139, 92, 246, 0.13),
+          transparent 24%
+        ),
+        linear-gradient(
+          180deg,
+          #060914,
+          #090d19 55%,
+          #060914
+        );
+
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+
+      pointer-events: none;
+      opacity: 0.25;
+
+      background-image:
+        linear-gradient(
+          rgba(255, 255, 255, 0.025) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.025) 1px,
+          transparent 1px
+        );
+
+      background-size: 38px 38px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1160px, 92%);
+      margin-inline: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      background: rgba(6, 9, 20, 0.84);
+      backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      min-height: 72px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 15px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+
+      gap: 10px;
+
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 13px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue),
+          var(--purple)
+        );
+
+      box-shadow:
+        0 10px 28px
+        rgba(59, 130, 246, 0.28);
+    }
+
+    .brand b {
+      color: var(--cyan);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .nav-links a {
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-btn {
+      padding: 11px 16px;
+
+      border-radius: 12px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue),
+          var(--purple)
+        );
+
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 610px;
+
+      display: grid;
+      place-items: center;
+
+      padding: 90px 0 70px;
+
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 880px;
+
+      animation:
+        show 0.7s ease both;
+    }
+
+    @keyframes show {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+
+      gap: 8px;
+
+      padding: 9px 15px;
+      margin-bottom: 23px;
+
+      border:
+        1px solid
+        rgba(34, 211, 238, 0.2);
+
+      border-radius: 99px;
+
+      background:
+        rgba(34, 211, 238, 0.06);
+
+      color: #c9f8ff;
+      font-size: 11px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+    
+      flex-shrink: 0;
+    
+      border-radius: 50%;
+    
+      background: #60a5fa;
+    
+      box-shadow:
+        0 0 8px rgba(96, 165, 250, 0.7);
+    
+      animation: dotKedip 1.5s ease-in-out infinite;
+    }
+    
+    @keyframes dotKedip {
+      0%,
+      100% {
+        opacity: 1;
+    
+        transform: scale(1);
+    
+        box-shadow:
+          0 0 7px rgba(96, 165, 250, 0.6);
+      }
+    
+      50% {
+        opacity: 0.4;
+    
+        transform: scale(1.25);
+    
+        box-shadow:
+          0 0 14px rgba(96, 165, 250, 0.9);
+      }
+    }
+    
+    /* Warna gradasi untuk tulisan status */
+    .status-text {
+      background:
+        linear-gradient(
+          90deg,
+          #60a5fa,
+          #22d3ee,
+          #a78bfa
+        );
+    
+      color: transparent;
+    
+      -webkit-background-clip: text;
+      background-clip: text;
+    
+      font-weight: 700;
+    
+      letter-spacing: 0.3px;
+    }    
+
+    .hero h1 {
+      font-family:
+        "Space Grotesk",
+        sans-serif;
+
+      font-size:
+        clamp(43px, 8vw, 82px);
+
+      line-height: 0.98;
+      letter-spacing: -3px;
+    }
+
+    .hero h1 span {
+      display: block;
+
+      background:
+        linear-gradient(
+          90deg,
+          #60a5fa,
+          #22d3ee,
+          #a78bfa
+        );
+
+      color: transparent;
+
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .hero p {
+      max-width: 680px;
+
+      margin:
+        23px auto 0;
+
+      color: var(--muted);
+
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 32px;
+    }
+
+    .button {
+      padding: 14px 21px;
+
+      border-radius: 13px;
+
+      font-size: 12px;
+      font-weight: 700;
+
+      transition: 0.25s;
+    }
+
+    .primary {
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue),
+          var(--purple)
+        );
+
+      box-shadow:
+        0 13px 32px
+        rgba(59, 130, 246, 0.27);
+    }
+
+    .secondary {
+      border:
+        1px solid
+        var(--border);
+
+      background:
+        rgba(255, 255, 255, 0.035);
+    }
+
+    .button:hover {
+      transform:
+        translateY(-4px);
+    }
+
+    /* =========================
+       BENEFITS
+    ========================= */
+
+    .benefits {
+      position: relative;
+      z-index: 2;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 14px;
+
+      margin-top: -25px;
+    }
+
+    .benefit {
+      display: flex;
+      align-items: center;
+
+      gap: 12px;
+
+      padding: 19px 15px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius: 17px;
+
+      background:
+        rgba(12, 18, 35, 0.88);
+
+      transition: 0.25s;
+    }
+
+    .benefit:hover {
+      transform:
+        translateY(-5px);
+
+      border-color:
+        rgba(96, 165, 250, 0.34);
+    }
+
+    .benefit-icon {
+      width: 43px;
+      height: 43px;
+
+      flex-shrink: 0;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 13px;
+
+      background:
+        rgba(59, 130, 246, 0.1);
+
+      font-size: 19px;
+    }
+
+    .benefit strong {
+      display: block;
+
+      margin-bottom: 4px;
+
+      font-size: 12px;
+    }
+
+    .benefit small {
+      color: var(--muted);
+      font-size: 9px;
+    }
+
+    /* =========================
+       SECTION
+    ========================= */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-head {
+      max-width: 700px;
+
+      margin:
+        0 auto 40px;
+
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 12px;
+
+      color: var(--cyan);
+
+      font-size: 10px;
+      font-weight: 800;
+
+      letter-spacing: 3px;
+    }
+
+    .section-head h2 {
+      margin-bottom: 13px;
+
+      font-family:
+        "Space Grotesk",
+        sans-serif;
+
+      font-size:
+        clamp(31px, 5vw, 47px);
+    }
+
+    .section-head p {
+      color: var(--muted);
+
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    /* =========================
+       FILTER
+    ========================= */
+
+    .filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      gap: 9px;
+
+      margin-bottom: 30px;
+    }
+
+    .filter {
+      padding: 10px 15px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius: 99px;
+
+      background:
+        rgba(255, 255, 255, 0.025);
+
+      color: var(--muted);
+
+      cursor: pointer;
+
+      font-family: inherit;
+      font-size: 10px;
+      font-weight: 700;
+
+      transition: 0.2s;
+    }
+
+    .filter:hover,
+    .filter.active {
+      color: white;
+
+      border-color:
+        rgba(96, 165, 250, 0.42);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(59, 130, 246, 0.25),
+          rgba(139, 92, 246, 0.2)
+        );
+    }
+
+    /* =========================
+       PRODUCTS - SCROLL SAMPING
+    ========================= */
+        
+    .products {
+      display: grid;
+    
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+    
+      gap: 17px;
+    
+      width: 100%;
+    }
+    
+    .product {
+      position: relative;
+    
+      flex:
+        none;
+    
+      scroll-snap-align:
+        start;
+    
+      padding: 23px;
+    
+      border:
+        1px solid
+        var(--border);
+    
+      border-radius: 20px;
+    
+      background:
+        linear-gradient(
+          145deg,
+          rgba(20, 30, 55, 0.88),
+          rgba(8, 13, 27, 0.94)
+        );
+    
+      transition: 0.25s;
+    }
+    
+    .product:hover {
+      transform:
+        translateY(-6px);
+    
+      border-color:
+        rgba(96, 165, 250, 0.4);
+    
+      box-shadow:
+        0 20px 45px
+        rgba(0, 0, 0, 0.28);
+    }
+    
+    .product.hide {
+      display: none;
+    }
+
+    .badge {
+      position: absolute;
+
+      top: 17px;
+      right: 17px;
+
+      padding: 6px 9px;
+
+      border:
+        1px solid
+        rgba(34, 211, 238, 0.15);
+
+      border-radius: 8px;
+
+      background:
+        rgba(34, 211, 238, 0.09);
+
+      color: #bff8ff;
+
+      font-size: 8px;
+      font-weight: 800;
+    }
+
+    .product-icon {
+      width: 52px;
+      height: 52px;
+
+      display: grid;
+      place-items: center;
+
+      border:
+        1px solid
+        rgba(96, 165, 250, 0.12);
+
+      border-radius: 16px;
+
+      background:
+        rgba(59, 130, 246, 0.1);
+
+      font-size: 23px;
+    }
+
+    .product h3 {
+      margin: 17px 0 7px;
+      font-size: 16px;
+    }
+
+    .price {
+      margin-bottom: 13px;
+
+      color: var(--cyan);
+
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .features {
+      min-height: auto;
+    
+      display: grid;
+      gap: 7px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+      line-height: 1.45;
+    }
+    
+    /* Khusus produk sewa bot dengan 5 fitur */
+    .features.features-5 {
+      min-height: auto;
+    }
+    
+    .features span::before {
+      content: "✓";
+
+      margin-right: 7px;
+
+      color: var(--green);
+
+      font-weight: 800;
+    }
+
+    .order {
+      display: block;
+
+      margin-top: 18px;
+      padding: 11px;
+
+      border:
+        1px solid
+        rgba(96, 165, 250, 0.15);
+
+      border-radius: 11px;
+
+      background:
+        rgba(59, 130, 246, 0.09);
+
+      color: #d9f6ff;
+
+      text-align: center;
+
+      font-size: 10px;
+      font-weight: 800;
+
+      transition: 0.2s;
+    }
+
+    .order:hover {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(59, 130, 246, 0.25),
+          rgba(139, 92, 246, 0.2)
+        );
+    }
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    .faq {
+      max-width: 820px;
+
+      display: grid;
+      gap: 11px;
+
+      margin-inline: auto;
+    }
+
+    details {
+      padding: 18px 19px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius: 15px;
+
+      background:
+        rgba(12, 18, 35, 0.8);
+    }
+
+    summary {
+      cursor: pointer;
+
+      list-style: none;
+
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    summary::after {
+      content: "+";
+
+      float: right;
+
+      color: var(--cyan);
+
+      font-size: 18px;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      padding-top: 13px;
+
+      color: var(--muted);
+
+      font-size: 11px;
+      line-height: 1.75;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 25px;
+
+      padding: 38px;
+
+      border:
+        1px solid
+        rgba(96, 165, 250, 0.2);
+
+      border-radius: 24px;
+
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(59, 130, 246, 0.15),
+          transparent 35%
+        ),
+        rgba(10, 16, 33, 0.92);
+    }
+
+    .contact h2 {
+      margin-bottom: 13px;
+
+      font-family:
+        "Space Grotesk",
+        sans-serif;
+
+      font-size: 39px;
+    }
+
+    .contact p {
+      color: var(--muted);
+
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 11px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+
+      gap: 12px;
+
+      padding: 15px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius: 14px;
+
+      background:
+        rgba(255, 255, 255, 0.025);
+    }
+
+    .contact-item i {
+      width: 40px;
+      height: 40px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 12px;
+
+      background:
+        rgba(59, 130, 246, 0.1);
+
+      font-style: normal;
+    }
+
+    .contact-item b {
+      display: block;
+
+      margin-bottom: 4px;
+
+      font-size: 11px;
+    }
+
+    .contact-item span {
+      color: var(--muted);
+
+      font-size: 9px;
+
+      word-break: break-all;
+    }
+
+    /* =========================
+       WHATSAPP FLOAT
+    ========================= */
+
+    .wa-float {
+      position: fixed;
+
+      right: 18px;
+      bottom: 18px;
+
+      z-index: 99;
+
+      width: 57px;
+      height: 57px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          #25d366,
+          #16a85a
+        );
+
+      box-shadow:
+        0 12px 30px
+        rgba(37, 211, 102, 0.35);
+
+      font-size: 24px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      margin-top: 65px;
+      padding: 32px 0;
+
+      border-top:
+        1px solid
+        var(--border);
+
+      color: var(--muted);
+
+      text-align: center;
+
+      font-size: 10px;
+    }
+
+    /* =========================
+       FITUR UNGGULAN
+    ========================= */
+
+    .featured {
+      position: relative;
+
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 10% 50%,
+          rgba(59, 130, 246, 0.1),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 90% 50%,
+          rgba(139, 92, 246, 0.1),
+          transparent 30%
+        );
+    }
+
+    .featured .section-head {
+      max-width: 760px;
+    }
+
+    .featured .section-head h2 span {
+      display: block;
+
+      background:
+        linear-gradient(
+          90deg,
+          #60a5fa,
+          #22d3ee,
+          #a78bfa
+        );
+
+      color: transparent;
+
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .featured-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 18px;
+
+      max-width: 960px;
+
+      margin-inline: auto;
+    }
+
+    .featured-card {
+      display: flex;
+      align-items: center;
+
+      gap: 18px;
+
+      min-height: 135px;
+
+      padding: 23px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius: 22px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(20, 30, 55, 0.82),
+          rgba(8, 13, 27, 0.9)
+        );
+
+      transition:
+        transform 0.25s,
+        border-color 0.25s,
+        box-shadow 0.25s;
+    }
+
+    .featured-card:hover {
+      transform:
+        translateY(-6px);
+
+      border-color:
+        rgba(96, 165, 250, 0.42);
+
+      box-shadow:
+        0 20px 45px
+        rgba(0, 0, 0, 0.25);
+    }
+
+    .featured-icon {
+      width: 68px;
+      height: 68px;
+
+      flex-shrink: 0;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 19px;
+
+      border:
+        1px solid
+        rgba(96, 165, 250, 0.14);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(59, 130, 246, 0.18),
+          rgba(139, 92, 246, 0.14)
+        );
+
+      font-size: 28px;
+
+      box-shadow:
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.06);
+    }
+
+    .featured-content h3 {
+      margin-bottom: 8px;
+
+      font-size: 15px;
+    }
+
+    .featured-content p {
+      color: var(--muted);
+
+      font-size: 11px;
+
+      line-height: 1.75;
+    }
+    
+    /* =========================
+       TOMBOL PESAN SEKARANG
+    ========================= */
+    
+    .order-section {
+      padding: 35px 0 90px;
+    }
+    
+    .catalog-button {
+      width: 100%;
+    
+      min-height: 88px;
+    
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    
+      border-radius: 20px;
+    
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue),
+          var(--purple)
+        );
+    
+      color: white;
+    
+      font-size: 22px;
+      font-weight: 800;
+    
+      letter-spacing: 1px;
+    
+      box-shadow:
+        0 18px 40px
+        rgba(59, 130, 246, 0.25);
+    
+      transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+    }
+    
+    .catalog-button:hover {
+      transform:
+        translateY(-5px);
+    
+      box-shadow:
+        0 24px 50px
+        rgba(59, 130, 246, 0.4);
+    }    
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+    
+      .benefits {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+    
+    }
+
+    @media (max-width: 650px) {
+      .nav-links {
+        display: none;
+      }
+
+      .contact {
+        grid-template-columns: 1fr;
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 510px) {
+    
+      /* =========================
+         PRODUK KATALOG
+      ========================= */
+    
+      .products {
+        display: grid;
+    
+        grid-template-columns:
+          1fr;
+    
+        gap: 16px;
+    
+        overflow: visible;
+    
+        padding: 0;
+      }
+    
+      .product {
+        min-width: 0;
+    
+        flex: none;
+    
+        padding: 25px;
+      }
+    
+    
+      /* =========================
+         HEADER KATALOG
+      ========================= */
+    
+      .catalog-heading {
+        margin-bottom: 24px;
+    
+        padding:
+          0 16px;
+      }
+    
+      .catalog-heading h1 {
+        font-size: 46px;
+      }
+    
+      .catalog-heading p {
+        font-size: 15px;
+      }
+    
+    
+      /* =========================
+         TAB KATEGORI
+      ========================= */
+    
+      .catalog-tabs {
+        width: 100%;
+    
+        margin:
+          0 0 28px;
+    
+        padding: 8px;
+    
+        border-radius: 18px;
+      }
+    
+      .catalog-tab {
+        padding:
+          14px 19px;
+    
+        font-size: 13px;
+      }
+    
+    
+      /* =========================
+         INFORMASI KATEGORI
+      ========================= */
+    
+      .selected-category {
+        margin-bottom: 25px;
+    
+        padding:
+          26px 18px;
+    
+        border-radius: 35px;
+      }
+    
+      .selected-category h2 {
+        font-size: 27px;
+      }
+    
+      .selected-category p {
+        font-size: 14px;
+      }
+    
+    
+      /* =========================
+         KARTU PRODUK
+      ========================= */
+    
+      .product-icon {
+        width: 62px;
+    
+        height: 62px;
+    
+        font-size: 27px;
+      }
+    
+      .product h3 {
+        font-size: 21px;
+      }
+    
+      .price {
+        font-size: 28px;
+      }
+    
+      .features {
+        font-size: 12px;
+      }
+    
+    
+      /* =========================
+         FITUR UNGGULAN
+      ========================= */
+    
+      .featured-grid {
+        grid-template-columns:
+          repeat(
+            2,
+            minmax(0, 1fr)
+          );
+    
+        gap: 10px;
+      }
+    
+      .featured-card {
+        min-width: 0;
+    
+        min-height: 190px;
+    
+        padding: 14px;
+    
+        flex-direction: column;
+    
+        align-items: flex-start;
+    
+        gap: 10px;
+      }
+    
+      .featured-icon {
+        width: 55px;
+    
+        height: 55px;
+    
+        font-size: 23px;
+      }
+    
+      .featured-content h3 {
+        font-size: 13px;
+    
+        line-height: 1.35;
+      }
+    
+      .featured-content p {
+        font-size: 9px;
+    
+        line-height: 1.65;
+      }
+    
+    
+      /* =========================
+         HEADER UTAMA
+      ========================= */
+    
+      .brand {
+        font-size: 13px;
+      }
+    
+      .nav-btn {
+        padding:
+          10px 11px;
+    
+        font-size: 9px;
+      }
+    
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+    
+      section {
+        padding:
+          76px 0;
+      }
+    
+    }
+    
+    /* =========================
+       HALAMAN KATALOG
+    ========================= */
+    
+    #catalog-page {
+      display: none;
+    
+      min-height: 100vh;
+    
+      padding:
+        45px 0 90px;
+    
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(59, 130, 246, 0.12),
+          transparent 35%
+        ),
+        var(--bg);
+    }
+    
+    #catalog-page.active {
+      display: block;
+    }
+    
+    .catalog-top {
+      display: flex;
+    
+      align-items: center;
+    
+      justify-content:
+        space-between;
+    
+      gap: 15px;
+    
+      margin-bottom: 55px;
+    }
+    
+    .back-home {
+      padding:
+        11px 16px;
+    
+      border:
+        1px solid
+        var(--border);
+    
+      border-radius:
+        12px;
+    
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.035
+        );
+    
+      color:
+        var(--text);
+    
+      cursor:
+        pointer;
+    
+      font-family:
+        inherit;
+    
+      font-size:
+        11px;
+    
+      font-weight:
+        700;
+    }
+    
+    .back-home:hover {
+      border-color:
+        rgba(
+          96,
+          165,
+          250,
+          0.45
+        );
+    }
+    
+    .catalog-page-title {
+      margin-bottom:
+        14px;
+    
+      font-family:
+        "Space Grotesk",
+        sans-serif;
+    
+      font-size:
+        clamp(
+          38px,
+          8vw,
+          70px
+        );
+    
+      text-align:
+        center;
+    }
+    
+    .catalog-page-title span {
+      background:
+        linear-gradient(
+          90deg,
+          #60a5fa,
+          #22d3ee,
+          #a78bfa
+        );
+    
+      color:
+        transparent;
+    
+      -webkit-background-clip:
+        text;
+    
+      background-clip:
+        text;
+    }
+    
+    .catalog-page-description {
+      max-width:
+        650px;
+    
+      margin:
+        0 auto 45px;
+    
+      color:
+        var(--muted);
+    
+      text-align:
+        center;
+    
+      font-size:
+        14px;
+    
+      line-height:
+        1.8;
+    }
+    
+    /* =========================
+       TAB KATALOG
+    ========================= */
+    
+    .catalog-tabs {
+      display:
+        flex;
+    
+      flex-wrap:
+        wrap;
+    
+      justify-content:
+        center;
+    
+      gap:
+        10px;
+    
+      margin:
+        0 auto 25px;
+    }
+    
+    
+    .catalog-tab {
+      padding:
+        11px 17px;
+    
+      border:
+        1px solid
+        var(--border);
+    
+      border-radius:
+        12px;
+    
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.035
+        );
+    
+      color:
+        var(--muted);
+    
+      cursor:
+        pointer;
+    
+      font-family:
+        inherit;
+    
+      font-size:
+        11px;
+    
+      font-weight:
+        700;
+    
+      transition:
+        0.25s ease;
+    }
+    
+    
+    .catalog-tab:hover {
+      border-color:
+        rgba(
+          96,
+          165,
+          250,
+          0.55
+        );
+    
+      color:
+        var(--text);
+    }
+    
+    
+    .catalog-tab.active {
+      border-color:
+        rgba(
+          96,
+          165,
+          250,
+          0.8
+        );
+    
+      background:
+        rgba(
+          59,
+          130,
+          246,
+          0.18
+        );
+    
+      color:
+        #ffffff;
+    
+      box-shadow:
+        0 0 25px
+        rgba(
+          59,
+          130,
+          246,
+          0.12
+        );
+    }
+    
+    
+    /* =========================
+       PRODUK KATALOG FINAL
+    ========================== */
+    
+    #catalog-page .products {
+      display: grid;
+    
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+    
+      gap: 18px;
+    
+      width: 100%;
+    
+      margin-top: 25px;
+    
+      padding: 0;
+    
+      overflow: visible;
+    }
+    
+    #catalog-page .product {
+      position: relative;
+    
+      display: flex;
+    
+      min-width: 0;
+    
+      min-height: 0;
+    
+      padding: 25px;
+    
+      border:
+        1px solid
+        var(--border);
+    
+      border-radius: 22px;
+    
+      flex-direction: column;
+    
+      background:
+        linear-gradient(
+          145deg,
+          rgba(20, 30, 55, 0.96),
+          rgba(8, 13, 27, 0.98)
+        );
+    
+      color:
+        var(--text);
+    
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+    }
+    
+    #catalog-page .product:hover {
+      transform:
+        translateY(-5px);
+    
+      border-color:
+        rgba(
+          96,
+          165,
+          250,
+          0.55
+        );
+    }
+    
+    #catalog-page .product.hide {
+      display: none;
+    }
+    
+    #catalog-page .product-icon {
+      width: 58px;
+    
+      height: 58px;
+    
+      display: grid;
+    
+      place-items: center;
+    
+      margin-bottom: 20px;
+    
+      border-radius: 17px;
+    
+      background:
+        rgba(
+          59,
+          130,
+          246,
+          0.12
+        );
+    }
+    
+    #catalog-page .product h3 {
+      margin:
+        0 0 10px;
+    
+      color:
+        var(--text);
+    
+      font-size:
+        18px;
+    }
+    
+    #catalog-page .price {
+      margin-bottom:
+        18px;
+    
+      color:
+        #60a5fa;
+    
+      font-size:
+        20px;
+    
+      font-weight:
+        800;
+    }
+    
+    #catalog-page .features {
+      min-height:
+        auto;
+    
+      display:
+        flex;
+    
+      margin-bottom:
+        22px;
+    
+      flex-direction:
+        column;
+    
+      gap:
+        9px;
+    }
+    
+    #catalog-page .features.features-5 {
+      min-height:
+        auto;
+    }
+    
+    #catalog-page .features span {
+      color:
+        var(--muted);
+    
+      font-size:
+        11px;
+    }
+    
+    #catalog-page .order {
+      display:
+        flex;
+    
+      width:
+        100%;
+    
+      min-height:
+        45px;
+    
+      margin-top:
+        auto;
+    
+      padding:
+        12px;
+    
+      border-radius:
+        12px;
+    
+      align-items:
+        center;
+    
+      justify-content:
+        center;
+    
+      background:
+        linear-gradient(
+          90deg,
+          #2563eb,
+          #06b6d4
+        );
+    
+      color:
+        white;
+    
+      font-size:
+        10px;
+    
+      font-weight:
+        800;
+    }
+    
+    #catalog-page .badge {
+      position:
+        absolute;
+    
+      top:
+        17px;
+    
+      right:
+        17px;
+    }
+    
+
+    /* =========================
+       RESPONSIVE PRODUK
+    ========================== */
+    
+    @media (max-width: 800px) {
+    
+      #catalog-page .products {
+        grid-template-columns:
+          repeat(
+            2,
+            minmax(0, 1fr)
+          );
+      }
+    
+    }
+    
+    @media (max-width: 510px) {
+    
+      #catalog-page .products {
+        grid-template-columns:
+          1fr;
+    
+        gap:
+          14px;
+      }
+    
+      #catalog-page .product {
+        min-height:
+          0;
+    
+        padding:
+          25px;
+      }
+    
+    }
+    
+    /* =========================
+       IKON TAB KATEGORI
+    ========================= */
+    
+    .catalog-tab {
+      display: inline-flex;
+    
+      align-items: center;
+    
+      justify-content: center;
+    
+      gap: 8px;
+    }
+    
+    .catalog-tab .tab-icon {
+      width: 19px;
+    
+      height: 19px;
+    
+      flex-shrink: 0;
+    
+      stroke: currentColor;
+    }
+    
+    .catalog-tab.active .tab-icon {
+      stroke: currentColor;
+    }
+    
+    /* =========================
+       ICON PRODUK - LUCIDE
+    ========================= */
+    
+    .product-icon {
+      font-size: 0 !important;
+    }
+    
+    .product-icon svg {
+      width: 30px;
+      height: 30px;
+    
+      stroke: #ffffff;
+      stroke-width: 2;
+    
+      fill: none;
+    
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    
+    /* =========================
+       PERBAIKAN UKURAN KARTU
+    ========================= */
+    
+    #catalog-page .product {
+      min-height: 0;
+      height: auto;
+    }
+    
+    #catalog-page .features {
+      min-height: 0;
+    }
+    
+    #catalog-page .features.features-5 {
+      min-height: 0;
+    }
+    
+    #catalog-page .order {
+      margin-top: 18px;
+    }
+    
+    @media (max-width: 510px) {
+    
+      #catalog-page .product {
+        min-height: 0;
+        height: auto;
+        padding: 22px;
+      }
+    
+      #catalog-page .features {
+        min-height: 0;
+        margin-bottom: 16px;
+      }
+    
+      #catalog-page .order {
+        margin-top: 18px;
+      }
+    
+    }
+    
+    /* =========================
+       PERBAIKAN UKURAN PRODUK HP
+    ========================== */
+    
+    @media (max-width: 510px) {
+    
+      #catalog-page .product {
+        height: auto !important;
+    
+        min-height: 0 !important;
+      }
+    
+      #catalog-page .features {
+        min-height: 0 !important;
+      }
+    
+      #catalog-page .features.features-5 {
+        min-height: 0 !important;
+      }
+    
+    }    
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+    <nav class="container">
+
+      <a
+        href="#home"
+        class="brand"
+      >
+        <span class="brand-icon">⚡</span>
+
+        RidzyXD
+        <b>Official Store</b>
+      </a>
+
+      <div class="nav-links">
+        <a href="#home">Beranda</a>
+        <a href="#products">Produk</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <a
+        href="#contact"
+        class="nav-btn"
+      >
+        HUBUNGI ADMIN
+      </a>
+
+    </nav>
+  </header>
+
+  <main>
+  
+    <div id="home-page">  
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section
+      class="hero"
+      id="home"
+    >
+      <div class="container hero-content">
+
+        <div class="status">
+          <span class="dot"></span>
+        
+          <span class="status-text">
+            Sistem Otomatisasi 100% Aktif
+          </span>
+        </div>
+
+        <h1>
+          <span>Semua Kebutuhan Hosting & Bot WhatsApp Dalam Satu Tempat</span>
+        </h1>
+
+        <p>
+          Berbagai produk dan layanan digital dalam satu tempat.
+          Harga terjangkau, proses cepat, full pengajaran,
+          serta bonus menarik.
+        </p>
+
+        <div class="buttons">
+
+          <button
+            type="button"
+              class="button primary"
+              onclick="bukaKatalog()"
+            >
+              🛒 Pesan Sekarang
+            </button>
+
+          <a
+            href="https://wa.me/62895392338445"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button secondary"
+          >
+            💬 CHAT ADMIN
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================
+         BENEFITS
+    ========================== -->
+
+    <div class="container">
+
+      <div class="benefits">
+
+        <div class="benefit">
+          <div class="benefit-icon">💰</div>
+
+          <div>
+            <strong>Harga Terjangkau</strong>
+            <small>Mulai dari harga hemat</small>
+          </div>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">⚡</div>
+
+          <div>
+            <strong>Proses Cepat</strong>
+            <small>Diproses sesuai antrean</small>
+          </div>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">📚</div>
+
+          <div>
+            <strong>Full Pengajaran</strong>
+            <small>Dibantu sampai memahami</small>
+          </div>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">🎁</div>
+
+          <div>
+            <strong>Bonus Menarik</strong>
+            <small>Bonus sesuai promo</small>
+          </div>
+        </div>
+
+      </div>
+
+    </div>             
+
+    <!-- =========================
+         TOMBOL PESAN SEKARANG
+    ========================== -->
+
+    <section class="order-section">
+    
+      <div class="container">
+    
+        <button
+          type="button"
+          class="catalog-button"
+          onclick="bukaKatalog()"
+        >
+          🛒 Pesan Sekarang
+        </button>
+    
+      </div>
+    
+    </section>
+
+    <!-- =========================
+         FITUR UNGGULAN
+    ========================== -->
+
+    <section class="featured">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div class="eyebrow">
+            FITUR UNGGULAN
+          </div>
+
+          <h2>
+            Mengapa Memilih
+            <span>Sistem Kami?</span>
+          </h2>
+
+          <p>
+            Kami menyediakan layanan digital dengan proses
+            yang cepat, aman, dan mudah. Fokus pada kualitas
+            layanan serta kepuasan pelanggan.
+          </p>
+
+        </div>
+
+        <div class="featured-grid">
+
+          <!-- FITUR 1 -->
+
+          <article class="featured-card">
+
+            <div class="featured-icon">
+              ⚡
+            </div>
+
+            <div class="featured-content">
+
+              <h3>
+                Proses Cepat
+              </h3>
+
+              <p>
+                Pesanan diproses sesuai antrean dengan
+                sistem yang praktis dan mudah.
+              </p>
+
+            </div>
+
+          </article>
+
+          <!-- FITUR 2 -->
+
+          <article class="featured-card">
+
+            <div class="featured-icon">
+              🛡️
+            </div>
+
+            <div class="featured-content">
+
+              <h3>
+                Aman & Terpercaya
+              </h3>
+
+              <p>
+                Transaksi dan layanan dilakukan secara
+                jelas serta dibantu langsung oleh admin.
+              </p>
+
+            </div>
+
+          </article>
+
+          <!-- FITUR 3 -->
+
+          <article class="featured-card">
+
+            <div class="featured-icon">
+              📚
+            </div>
+
+            <div class="featured-content">
+
+              <h3>
+                Full Pengajaran
+              </h3>
+
+              <p>
+                Mendapatkan panduan penggunaan sesuai
+                paket agar lebih mudah dipahami.
+              </p>
+
+            </div>
+
+          </article>
+
+          <!-- FITUR 4 -->
+
+          <article class="featured-card">
+
+            <div class="featured-icon">
+              💬
+            </div>
+
+            <div class="featured-content">
+
+              <h3>
+                Bantuan Admin
+              </h3>
+
+              <p>
+                Jika mengalami kendala, kamu dapat
+                menghubungi admin melalui WhatsApp
+                atau Telegram.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    </div>
+
+    <!-- =========================
+         FAQ
+    ========================== -->
+
+    <section id="faq">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div class="eyebrow">
+            INFORMATION
+          </div>
+
+          <h2>
+            Pertanyaan yang Sering Diajukan
+          </h2>
+
+          <p>
+            Informasi sebelum melakukan pemesanan.
+          </p>
+
+        </div>
+
+        <div class="faq">
+
+          <details>
+
+            <summary>
+              Bagaimana cara melakukan pembayaran?
+            </summary>
+
+            <p>
+              Hubungi admin terlebih dahulu.
+              Admin akan memberikan total pembayaran
+              serta metode pembayaran yang tersedia.
+            </p>
+
+          </details>
+
+          <details>
+
+            <summary>
+              Berapa lama proses pengiriman produk?
+            </summary>
+
+            <p>
+              Waktu proses bergantung pada jenis produk,
+              ketersediaan, dan jumlah antrean.
+              Admin akan memberikan perkiraan proses.
+            </p>
+
+          </details>
+
+          <details>
+
+            <summary>
+              Apakah ada garansi untuk produk yang dibeli?
+            </summary>
+
+            <p>
+              Ketentuan garansi berbeda pada setiap produk.
+              Tanyakan informasi garansi kepada admin
+              sebelum melakukan pembayaran.
+            </p>
+
+          </details>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact">
+
+      <div class="container">
+
+        <div class="contact">
+
+          <div>
+
+            <div class="eyebrow">
+              HUBUNGI KAMI
+            </div>
+
+            <h2>
+              Butuh Bantuan?
+            </h2>
+
+            <p>
+              Hubungi admin untuk bertanya,
+              melihat harga terbaru,
+              atau melakukan pemesanan.
+            </p>
+
+            <br>
+
+            <a
+              href="https://wa.me/62895392338445"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button primary"
+            >
+              💬 CHAT WHATSAPP
+            </a>
+
+          </div>
+
+          <div class="contact-list">
+
+            <a
+              class="contact-item"
+              href="https://wa.me/62895392338445"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <i>💬</i>
+
+              <div>
+                <b>WhatsApp Admin</b>
+
+                <span>
+                  Klik untuk menghubungi admin
+                </span>
+              </div>
+
+            </a>
+
+            <a
+              class="contact-item"
+              href="https://t.me/Ridzyxdoffc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i>💬</i>
+            
+              <div>
+                <b>Telegram</b>
+                <span>@Ridzyxdoffc</span>
+              </div>
+            </a>
+
+            <a
+              class="contact-item"
+              href="mailto:ridzyofficial338@gmail.com"
+            >
+
+              <i>📧</i>
+
+              <div>
+                <b>Gmail</b>
+
+                <span>
+                  ridzyofficial338@gmail.com
+                </span>
+              </div>
+
+            </a>
+
+            <div class="contact-item">
+
+              <i>🟢</i>
+
+              <div>
+
+                <b>Status Layanan</b>
+
+                <span>
+                  Support tersedia 24/7
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+</main>
+
+
+<!-- =========================
+     HALAMAN KATALOG
+========================== -->
+
+<div id="catalog-page">
+
+  <div class="container">
+
+
+    <!-- =========================
+         TOMBOL KEMBALI
+    ========================== -->
+
+    <div class="catalog-top">
+
+      <a
+        href="#"
+        class="brand"
+        onclick="
+          kembaliKeBeranda();
+          return false;
+        "
+      >
+
+        <span class="brand-icon">
+          ⚡
+        </span>
+
+        RidzyXD
+
+        <b>
+          Official Store
+        </b>
+
+      </a>
+
+
+      <button
+        type="button"
+        class="back-home"
+        onclick="kembaliKeBeranda()"
+      >
+        ← Kembali ke Beranda
+      </button>
+
+    </div>
+
+
+    <!-- =========================
+         JUDUL KATALOG
+    ========================== -->
+
+    <h1 class="catalog-page-title">
+
+      <span>
+        RidzyXD Official Store
+      </span>
+
+    </h1>
+
+
+    <p class="catalog-page-description">
+
+      Pilih kategori layanan yang kamu butuhkan,
+      kemudian pilih produk untuk melakukan
+      pemesanan melalui WhatsApp.
+
+    </p>
+
+
+    <!-- =========================
+         TAB KATEGORI
+    ========================= -->
+    
+    <div class="catalog-tabs">
+    
+      <!-- PANEL -->
+    
+      <button
+        type="button"
+        class="catalog-tab active"
+        data-category="panel"
+        onclick="showCategory('panel', this)"
+      >
+        <svg
+          class="tab-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect
+            x="3"
+            y="3"
+            width="18"
+            height="7"
+            rx="2"
+          ></rect>
+    
+          <rect
+            x="3"
+            y="14"
+            width="18"
+            height="7"
+            rx="2"
+          ></rect>
+    
+          <path d="M7 6h.01"></path>
+          <path d="M7 17h.01"></path>
+        </svg>
+    
+        <span>Panel</span>
+      </button>
+    
+    
+      <!-- BOT -->
+    
+      <button
+        type="button"
+        class="catalog-tab"
+        data-category="bot"
+        onclick="showCategory('bot', this)"
+      >
+        <svg
+          class="tab-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect
+            x="3"
+            y="7"
+            width="18"
+            height="13"
+            rx="2"
+          ></rect>
+    
+          <path d="M12 3v4"></path>
+    
+          <circle
+            cx="8"
+            cy="13"
+            r="1"
+          ></circle>
+    
+          <circle
+            cx="16"
+            cy="13"
+            r="1"
+          ></circle>
+    
+          <path d="M8 17h8"></path>
+        </svg>
+    
+        <span>Bot</span>
+      </button>
+    
+    
+      <!-- EDITOR -->
+    
+      <button
+        type="button"
+        class="catalog-tab"
+        data-category="editor"
+        onclick="showCategory('editor', this)"
+      >
+        <svg
+          class="tab-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle
+            cx="13.5"
+            cy="6.5"
+            r="2.5"
+          ></circle>
+    
+          <path
+            d="M4 20l5.5-5.5"
+          ></path>
+    
+          <path
+            d="M9 20l8.5-8.5"
+          ></path>
+    
+          <path
+            d="M15 4l5 5"
+          ></path>
+        </svg>
+    
+        <span>Editor</span>
+      </button>
+    
+    
+      <!-- PREMIUM -->
+    
+      <button
+        type="button"
+        class="catalog-tab"
+        data-category="premium"
+        onclick="showCategory('premium', this)"
+      >
+        <svg
+          class="tab-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path
+            d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9z"
+          ></path>
+        </svg>
+    
+        <span>Premium</span>
+      </button>
+    
+    
+      <!-- GAME -->
+    
+      <button
+        type="button"
+        class="catalog-tab"
+        data-category="game"
+        onclick="showCategory('game', this)"
+      >
+        <svg
+          class="tab-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path
+            d="M6 12h4"
+          ></path>
+    
+          <path
+            d="M8 10v4"
+          ></path>
+    
+          <circle
+            cx="15"
+            cy="11"
+            r="1"
+          ></circle>
+    
+          <circle
+            cx="18"
+            cy="14"
+            r="1"
+          ></circle>
+    
+          <path
+            d="M7 6h10a5 5 0 0 1 4.8 6.4l-1.2 4A2.5 2.5 0 0 1 16 17.2L14.5 15h-5L8 17.2a2.5 2.5 0 0 1-4.6-.8l-1.2-4A5 5 0 0 1 7 6z"
+          ></path>
+        </svg>
+    
+        <span>Game</span>
+      </button>
+    
+    
+      <!-- DIGITAL -->
+    
+      <button
+        type="button"
+        class="catalog-tab"
+        data-category="digital"
+        onclick="showCategory('digital', this)"
+      >
+        <svg
+          class="tab-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect
+            x="3"
+            y="4"
+            width="18"
+            height="12"
+            rx="2"
+          ></rect>
+    
+          <path
+            d="M8 20h8"
+          ></path>
+    
+          <path
+            d="M12 16v4"
+          ></path>
+        </svg>
+    
+        <span>Digital</span>
+      </button>
+    
+    
+      <!-- SOSMED -->
+    
+      <button
+        type="button"
+        class="catalog-tab"
+        data-category="sosmed"
+        onclick="showCategory('sosmed', this)"
+      >
+        <svg
+          class="tab-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect
+            x="6"
+            y="2"
+            width="12"
+            height="20"
+            rx="2"
+          ></rect>
+    
+          <path
+            d="M10 5h4"
+          ></path>
+    
+          <path
+            d="M11.5 18h1"
+          ></path>
+        </svg>
+    
+        <span>Sosmed</span>
+      </button>
+    
+    
+      <!-- LAINNYA -->
+    
+      <button
+        type="button"
+        class="catalog-tab"
+        data-category="other"
+        onclick="showCategory('other', this)"
+      >
+        <svg
+          class="tab-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect
+            x="4"
+            y="4"
+            width="6"
+            height="6"
+            rx="1"
+          ></rect>
+    
+          <rect
+            x="14"
+            y="4"
+            width="6"
+            height="6"
+            rx="1"
+          ></rect>
+    
+          <rect
+            x="4"
+            y="14"
+            width="6"
+            height="6"
+            rx="1"
+          ></rect>
+    
+          <rect
+            x="14"
+            y="14"
+            width="6"
+            height="6"
+            rx="1"
+          ></rect>
+        </svg>
+    
+        <span>Lainnya</span>
+      </button>
+    
+    </div>
+    
+    <!-- =========================
+         INFORMASI KATEGORI
+    ========================== -->
+
+    <div
+      class="selected-category"
+      id="selectedCategory"
+    >
+
+      <h2 id="categoryTitle">
+
+        <span>
+          Panel Pterodactyl
+        </span>
+
+      </h2>
+
+
+      <p id="categoryDescription">
+
+        Hosting bot dan game dengan performa
+        stabil serta harga terjangkau.
+        Pilih varian:
+
+      </p>
+
+    </div>
+
+    <!-- =========================
+         PRODUK KATALOG
+    ========================== -->
+    
+    <div
+      class="products"
+      id="productsList"
+    >
+    
+      <!-- =========================
+           PANEL
+      ========================== -->
+    
+      <article class="product" data-category="panel">
+        <div class="product-icon">
+          <i data-lucide="server"></i>
+        </div>
+    
+        <h3>Panel 1 GB</h3>
+    
+        <div class="price">Rp3.500</div>
+    
+        <div class="features">
+          <span>Server Private</span>
+          <span>Performa Kencang</span>
+          <span>Full Garansi</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20pesan%20Panel%201GB"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="panel">
+        <div class="product-icon">
+          <i data-lucide="server"></i>
+        </div>
+    
+        <h3>Panel 2 GB</h3>
+    
+        <div class="price">Rp5.000</div>
+    
+        <div class="features">
+          <span>Server Private</span>
+          <span>Performa Kencang</span>
+          <span>Full Garansi</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20pesan%20Panel%202GB"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="panel">
+        <div class="product-icon">
+          <i data-lucide="server"></i>
+        </div>
+    
+        <h3>Panel 3 GB</h3>
+    
+        <div class="price">Rp7.000</div>
+    
+        <div class="features">
+          <span>Server Private</span>
+          <span>Performa Kencang</span>
+          <span>Full Garansi</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20pesan%20Panel%203GB"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="panel">
+        <div class="product-icon">
+          <i data-lucide="server"></i>
+        </div>
+    
+        <h3>Panel 4 GB</h3>
+    
+        <div class="price">Rp8.500</div>
+    
+        <div class="features">
+          <span>Server Private</span>
+          <span>Performa Kencang</span>
+          <span>Full Garansi</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20pesan%20Panel%204GB"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="panel">
+        <span class="badge">LARIS</span>
+    
+        <div class="product-icon">
+          <i data-lucide="server"></i>
+        </div>
+    
+        <h3>Panel 5 GB</h3>
+    
+        <div class="price">Rp10.000</div>
+    
+        <div class="features">
+          <span>Server Private</span>
+          <span>Performa Kencang</span>
+          <span>Full Garansi</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20pesan%20Panel%205GB"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="panel">
+        <div class="product-icon">
+          <i data-lucide="server"></i>
+        </div>
+    
+        <h3>Panel 6 GB</h3>
+    
+        <div class="price">Rp12.000</div>
+    
+        <div class="features">
+          <span>Server Private</span>
+          <span>Performa Kencang</span>
+          <span>Full Garansi</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20pesan%20Panel%206GB"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="panel">
+        <div class="product-icon">
+          <i data-lucide="server"></i>
+        </div>
+    
+        <h3>Panel 7 GB</h3>
+    
+        <div class="price">Rp14.000</div>
+    
+        <div class="features">
+          <span>Server Private</span>
+          <span>Performa Kencang</span>
+          <span>Full Garansi</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20pesan%20Panel%207GB"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="panel">
+        <div class="product-icon">
+          <i data-lucide="server"></i>
+        </div>
+    
+        <h3>Panel 8 GB</h3>
+    
+        <div class="price">Rp16.000</div>
+    
+        <div class="features">
+          <span>Server Private</span>
+          <span>Performa Kencang</span>
+          <span>Full Garansi</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20pesan%20Panel%208GB"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="panel">
+        <div class="product-icon">
+          <i data-lucide="server"></i>
+        </div>
+    
+        <h3>Panel 9 GB</h3>
+    
+        <div class="price">Rp19.000</div>
+    
+        <div class="features">
+          <span>Server Private</span>
+          <span>Performa Kencang</span>
+          <span>Full Garansi</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20pesan%20Panel%209GB"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="panel">
+        <div class="product-icon">
+          <i data-lucide="server"></i>
+        </div>
+    
+        <h3>Panel 10 GB</h3>
+    
+        <div class="price">Rp21.000</div>
+    
+        <div class="features">
+          <span>Server Private</span>
+          <span>Performa Kencang</span>
+          <span>Full Garansi</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20pesan%20Panel%2010GB"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="panel">
+        <div class="product-icon">
+          <i data-lucide="server"></i>
+        </div>
+    
+        <h3>Panel 11 GB</h3>
+    
+        <div class="price">Rp23.000</div>
+    
+        <div class="features">
+          <span>Server Private</span>
+          <span>Performa Kencang</span>
+          <span>Full Garansi</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20pesan%20Panel%2011GB"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="panel">
+        <span class="badge">BEST SELLER</span>
+    
+        <div class="product-icon">
+          <i data-lucide="server"></i>
+        </div>
+    
+        <h3>Panel Unlimited</h3>
+    
+        <div class="price">Rp25.000</div>
+    
+        <div class="features">
+          <span>Unlimited RAM</span>
+          <span>Unlimited CPU</span>
+          <span>Performa Maksimal</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20pesan%20Panel%20Unlimited"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN SEKARANG
+        </a>
+      </article>
+    
+    
+      <!-- =========================
+           BOT
+      ========================== -->
+    
+      <article class="product" data-category="bot">
+        <div class="product-icon">
+          <i data-lucide="bot"></i>
+        </div>
+    
+        <h3>Sewa Bot Per Minggu</h3>
+    
+        <div class="price">Rp3.000</div>
+    
+        <div class="features features-5">
+          <span>Online 24/7</span>
+          <span>Full Garansi</span>
+          <span>Fitur Lengkap &amp; Banyak</span>
+          <span>Security Grup Lengkap</span>
+          <span>Bantuan Penggunaan</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20sewa%20Bot%20Per%20Minggu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="bot">
+        <span class="badge">LARIS</span>
+    
+        <div class="product-icon">
+          <i data-lucide="bot"></i>
+        </div>
+    
+        <h3>Sewa Bot Per Bulan</h3>
+    
+        <div class="price">Rp10.000</div>
+    
+        <div class="features features-5">
+          <span>Online 24/7</span>
+          <span>Full Garansi</span>
+          <span>Fitur Lengkap &amp; Banyak</span>
+          <span>Security Grup Lengkap</span>
+          <span>Bantuan Penggunaan</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20sewa%20Bot%20Per%20Bulan"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="bot">
+        <div class="product-icon">
+          <i data-lucide="bot"></i>
+        </div>
+    
+        <h3>Sewa Bot Per Tahun</h3>
+    
+        <div class="price">Rp130.000</div>
+    
+        <div class="features features-5">
+          <span>Online 24/7</span>
+          <span>Full Garansi</span>
+          <span>Fitur Lengkap &amp; Banyak</span>
+          <span>Security Grup Lengkap</span>
+          <span>Bantuan Penggunaan</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20sewa%20Bot%20Per%20Tahun"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="bot">
+        <div class="product-icon">
+          <i data-lucide="bot"></i>
+        </div>
+    
+        <h3>Jadi Bot Basic</h3>
+    
+        <div class="price">Rp20.000</div>
+    
+        <div class="features">
+          <span>Pemasangan Bot</span>
+          <span>Bantuan Konfigurasi</span>
+          <span>Full Pengajaran Dasar</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20pesan%20Jadi%20Bot%20Basic"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="bot">
+        <span class="badge">BEST SELLER</span>
+    
+        <div class="product-icon">
+          <i data-lucide="bot"></i>
+        </div>
+    
+        <h3>Jadi Bot Premium</h3>
+    
+        <div class="price">Rp30.000</div>
+    
+        <div class="features">
+          <span>Setup Lebih Lengkap</span>
+          <span>Full Pengajaran</span>
+          <span>Bantuan Setelah Pemasangan</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20pesan%20Jadi%20Bot%20Premium"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="bot">
+        <div class="product-icon">
+          <i data-lucide="bot"></i>
+        </div>
+    
+        <h3>Perbaikan Error Bot</h3>
+    
+        <div class="price">Mulai Dari Rp5.000</div>
+    
+        <div class="features">
+          <span>Pengecekan Masalah</span>
+          <span>Perbaikan Sesuai Error</span>
+          <span>Harga Sesuai Tingkat Error</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20memperbaiki%20error%20bot"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          KONSULTASI ADMIN
+        </a>
+      </article>
+    
+    
+      <!-- =========================
+           EDITOR
+      ========================== -->
+    
+      <article class="product" data-category="editor">
+        <div class="product-icon">
+          <i data-lucide="palette"></i>
+        </div>
+    
+        <h3>Edit Foto</h3>
+    
+        <div class="price">Mulai Dari Rp3.000</div>
+    
+        <div class="features">
+          <span>Edit Sederhana</span>
+          <span>Menyesuaikan Permintaan</span>
+          <span>Revisi Sesuai Kesepakatan</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20pesan%20jasa%20Edit%20Foto"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN EDITOR
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="editor">
+        <div class="product-icon">
+          <i data-lucide="palette"></i>
+        </div>
+    
+        <h3>Desain Poster</h3>
+    
+        <div class="price">Mulai Dari Rp5.000</div>
+    
+        <div class="features">
+          <span>Desain Sesuai Tema</span>
+          <span>Ukuran Sesuai Kebutuhan</span>
+          <span>File Hasil Dikirim Digital</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20pesan%20Desain%20Poster"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN EDITOR
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="editor">
+        <div class="product-icon">
+          <i data-lucide="palette"></i>
+        </div>
+    
+        <h3>Desain Banner</h3>
+    
+        <div class="price">Mulai Dari Rp7.000</div>
+    
+        <div class="features">
+          <span>Banner Grup atau Toko</span>
+          <span>Desain Sesuai Brand</span>
+          <span>Revisi Sesuai Kesepakatan</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20pesan%20Desain%20Banner"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN EDITOR
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="editor">
+        <div class="product-icon">
+          <i data-lucide="palette"></i>
+        </div>
+    
+        <h3>Desain Logo</h3>
+    
+        <div class="price">Mulai Dari Rp10.000</div>
+    
+        <div class="features">
+          <span>Logo Sesuai Konsep</span>
+          <span>File Digital</span>
+          <span>Revisi Sesuai Paket</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20pesan%20Desain%20Logo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN EDITOR
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="editor">
+        <div class="product-icon">
+          <i data-lucide="palette"></i>
+        </div>
+    
+        <h3>Edit Video Pendek</h3>
+    
+        <div class="price">Mulai Dari Rp10.000</div>
+    
+        <div class="features">
+          <span>Video Pendek</span>
+          <span>Efek Sesuai Permintaan</span>
+          <span>Harga Sesuai Durasi</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20pesan%20Edit%20Video"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PESAN EDITOR
+        </a>
+      </article>
+    
+    
+      <!-- =========================
+           PREMIUM
+      ========================== -->
+    
+      <article class="product" data-category="premium">
+        <span class="badge">LARIS</span>
+    
+        <div class="product-icon">
+          <i data-lucide="crown"></i>
+        </div>
+    
+        <h3>CapCut Premium</h3>
+    
+        <div class="price">Mulai Dari Rp5.000</div>
+    
+        <div class="features">
+          <span>Paket Sesuai Ketersediaan</span>
+          <span>Informasi Diberikan Admin</span>
+          <span>Ketentuan Sesuai Produk</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20tanya%20CapCut%20Premium"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TANYA ADMIN
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="premium">
+        <div class="product-icon">
+          <i data-lucide="crown"></i>
+        </div>
+    
+        <h3>Canva Premium</h3>
+    
+        <div class="price">Mulai Dari Rp5.000</div>
+    
+        <div class="features">
+          <span>Paket Sesuai Stok</span>
+          <span>Proses Sesuai Antrean</span>
+          <span>Ketentuan Dari Admin</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20tanya%20Canva%20Premium"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TANYA ADMIN
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="premium">
+        <span class="badge">LARIS</span>
+    
+        <div class="product-icon">
+          <i data-lucide="crown"></i>
+        </div>
+    
+        <h3>Spotify Premium</h3>
+    
+        <div class="price">Mulai Dari Rp5.000</div>
+    
+        <div class="features">
+          <span>Pilihan Paket Tersedia</span>
+          <span>Informasi Melalui Admin</span>
+          <span>Harga Dapat Berubah</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20tanya%20Spotify%20Premium"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TANYA ADMIN
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="premium">
+        <div class="product-icon">
+          <i data-lucide="crown"></i>
+        </div>
+    
+        <h3>Netflix</h3>
+    
+        <div class="price">Mulai Dari Rp10.000</div>
+    
+        <div class="features">
+          <span>Paket Sesuai Ketersediaan</span>
+          <span>Durasi Sesuai Pilihan</span>
+          <span>Tanya Admin Terlebih Dahulu</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20tanya%20Netflix"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TANYA ADMIN
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="premium">
+        <span class="badge">LARIS</span>
+    
+        <div class="product-icon">
+          <i data-lucide="crown"></i>
+        </div>
+    
+        <h3>Alight Motion</h3>
+    
+        <div class="price">Mulai Dari Rp5.000</div>
+    
+        <div class="features">
+          <span>Paket Sesuai Stok</span>
+          <span>Informasi Dari Admin</span>
+          <span>Ketentuan Berlaku</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20tanya%20Alight%20Motion"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TANYA ADMIN
+        </a>
+      </article>
+    
+    
+      <!-- =========================
+           GAME
+      ========================== -->
+    
+      <article class="product" data-category="game">
+        <span class="badge">LARIS</span>
+    
+        <div class="product-icon">
+          <i data-lucide="gamepad-2"></i>
+        </div>
+    
+        <h3>Mobile Legends</h3>
+    
+        <div class="price">Mulai Dari Rp5.000</div>
+    
+        <div class="features">
+          <span>Berbagai Pilihan Nominal</span>
+          <span>Proses Sesuai Antrean</span>
+          <span>Hubungi Admin Untuk Harga</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20Top%20Up%20Mobile%20Legends"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TOP UP SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="game">
+        <span class="badge">LARIS</span>
+    
+        <div class="product-icon">
+          <i data-lucide="gamepad-2"></i>
+        </div>
+    
+        <h3>Free Fire</h3>
+    
+        <div class="price">Mulai Dari Rp5.000</div>
+    
+        <div class="features">
+          <span>Pilihan Nominal Tersedia</span>
+          <span>Harga Dapat Berubah</span>
+          <span>Konfirmasi Sebelum Bayar</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20Top%20Up%20Free%20Fire"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TOP UP SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="game">
+        <div class="product-icon">
+          <i data-lucide="gamepad-2"></i>
+        </div>
+    
+        <h3>PUBG Mobile</h3>
+    
+        <div class="price">Mulai Dari Rp10.000</div>
+    
+        <div class="features">
+          <span>Pilihan Nominal</span>
+          <span>Proses Sesuai Antrean</span>
+          <span>Tanya Harga Terbaru</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20Top%20Up%20PUBG%20Mobile"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TOP UP SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="game">
+        <div class="product-icon">
+          <i data-lucide="gamepad-2"></i>
+        </div>
+    
+        <h3>Roblox</h3>
+    
+        <div class="price">Mulai Dari Rp10.000</div>
+    
+        <div class="features">
+          <span>Pilihan Produk Tersedia</span>
+          <span>Harga Sesuai Nominal</span>
+          <span>Hubungi Admin</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20Top%20Up%20Roblox"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TOP UP SEKARANG
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="game">
+        <div class="product-icon">
+          <i data-lucide="gamepad-2"></i>
+        </div>
+    
+        <h3>Genshin Impact</h3>
+    
+        <div class="price">Mulai Dari Rp10.000</div>
+    
+        <div class="features">
+          <span>Produk Sesuai Ketersediaan</span>
+          <span>Harga Sesuai Nominal</span>
+          <span>Konfirmasi Kepada Admin</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20Top%20Up%20Genshin%20Impact"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TOP UP SEKARANG
+        </a>
+      </article>
+    
+    
+      <!-- =========================
+           DIGITAL
+      ========================== -->
+    
+      <article class="product" data-category="digital">
+        <span class="badge">LARIS</span>
+    
+        <div class="product-icon">
+          <i data-lucide="code-2"></i>
+        </div>
+    
+        <h3>Script Bot WhatsApp</h3>
+    
+        <div class="price">Mulai Dari Rp15.000</div>
+    
+        <div class="features">
+          <span>Script Sesuai Pilihan</span>
+          <span>Informasi Fitur Dari Admin</span>
+          <span>Full Pengajaran Sesuai Paket</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20tanya%20Script%20Bot%20WhatsApp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LIHAT DETAIL
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="digital">
+        <div class="product-icon">
+          <i data-lucide="code-2"></i>
+        </div>
+    
+        <h3>Script Bot Telegram</h3>
+    
+        <div class="price">Mulai Dari Rp15.000</div>
+    
+        <div class="features">
+          <span>Script Sesuai Pilihan</span>
+          <span>Informasi Fitur Dari Admin</span>
+          <span>Full Pengajaran Sesuai Paket</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20tanya%20Script%20Bot%20Telegram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LIHAT DETAIL
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="digital">
+        <div class="product-icon">
+          <i data-lucide="code-2"></i>
+        </div>
+    
+        <h3>Template Website</h3>
+    
+        <div class="price">Mulai Dari Rp10.000</div>
+    
+        <div class="features">
+          <span>Template Sesuai Pilihan</span>
+          <span>File Digital</span>
+          <span>Harga Tergantung Desain</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20tanya%20Template%20Website"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LIHAT DETAIL
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="digital">
+        <div class="product-icon">
+          <i data-lucide="code-2"></i>
+        </div>
+    
+        <h3>Template Menu Bot</h3>
+    
+        <div class="price">Mulai Dari Rp5.000</div>
+    
+        <div class="features">
+          <span>Desain Menu Pilihan</span>
+          <span>Menyesuaikan Script</span>
+          <span>Bantuan Pemasangan</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20tanya%20Template%20Menu%20Bot"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LIHAT DETAIL
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="digital">
+        <div class="product-icon">
+          <i data-lucide="code-2"></i>
+        </div>
+    
+        <h3>Source Code</h3>
+    
+        <div class="price">Mulai Dari Rp20.000</div>
+    
+        <div class="features">
+          <span>Source Sesuai Produk</span>
+          <span>File Digital</span>
+          <span>Detail Melalui Admin</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20tanya%20Source%20Code"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LIHAT DETAIL
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="digital">
+        <div class="product-icon">
+          <i data-lucide="code-2"></i>
+        </div>
+    
+        <h3>E-book Digital</h3>
+    
+        <div class="price">Mulai Dari Rp5.000</div>
+    
+        <div class="features">
+          <span>Materi Sesuai Pilihan</span>
+          <span>Format Digital</span>
+          <span>Dikirim Setelah Proses</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20tanya%20E-book%20Digital"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LIHAT DETAIL
+        </a>
+      </article>
+    
+    
+      <!-- =========================
+           SOSMED
+      ========================== -->
+    
+      <article class="product" data-category="sosmed">
+        <span class="badge">LARIS</span>
+    
+        <div class="product-icon">
+          <i data-lucide="smartphone"></i>
+        </div>
+    
+        <h3>Followers Sosmed</h3>
+    
+        <div class="price">Mulai Dari Rp2.000</div>
+    
+        <div class="features">
+          <span>Pilihan Jumlah Tersedia</span>
+          <span>Harga Sesuai Jumlah</span>
+          <span>Proses Sesuai Antrean</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20tanya%20Suntik%20Followers"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TANYA ADMIN
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="sosmed">
+        <span class="badge">LARIS</span>
+    
+        <div class="product-icon">
+          <i data-lucide="smartphone"></i>
+        </div>
+    
+        <h3>Like Sosmed</h3>
+    
+        <div class="price">Mulai Dari Rp1.000</div>
+    
+        <div class="features">
+          <span>Pilihan Jumlah Tersedia</span>
+          <span>Harga Sementara</span>
+          <span>Detail Dari Admin</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20tanya%20Suntik%20Like"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TANYA ADMIN
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="sosmed">
+        <span class="badge">LARIS</span>
+    
+        <div class="product-icon">
+          <i data-lucide="smartphone"></i>
+        </div>
+    
+        <h3>View Sosmed</h3>
+    
+        <div class="price">Mulai Dari Rp1.000</div>
+    
+        <div class="features">
+          <span>Pilihan Jumlah Tersedia</span>
+          <span>Harga Sesuai Paket</span>
+          <span>Hubungi Admin</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20tanya%20Suntik%20View"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TANYA ADMIN
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="sosmed">
+        <span class="badge">LARIS</span>
+    
+        <div class="product-icon">
+          <i data-lucide="smartphone"></i>
+        </div>
+    
+        <h3>Subscriber</h3>
+    
+        <div class="price">Mulai Dari Rp5.000</div>
+    
+        <div class="features">
+          <span>Paket Sesuai Ketersediaan</span>
+          <span>Harga Sesuai Jumlah</span>
+          <span>Informasi Dari Admin</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20tanya%20Suntik%20Subscriber"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TANYA ADMIN
+        </a>
+      </article>
+       
+      <!-- =========================
+           LAINNYA
+      ========================== -->
+    
+      <article class="product" data-category="other">
+        <span class="badge">LARIS</span>
+    
+        <div class="product-icon">
+          <i data-lucide="boxes"></i>
+        </div>
+    
+        <h3>Nomor Kosong WhatsApp</h3>
+    
+        <div class="price">Mulai Dari Rp7.000</div>
+    
+        <div class="features">
+          <span>Full Garansi</span>
+          <span>Tersedia Berbagai Negara</span>
+          <span>Cocok Untuk Sender Bot</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20tanya%20Nomor%20Kosong%20WhatsApp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TANYA ADMIN
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="other">
+        <span class="badge">LARIS</span>
+    
+        <div class="product-icon">
+          <i data-lucide="boxes"></i>
+        </div>
+    
+        <h3>Nomor Kosong Telegram</h3>
+    
+        <div class="price">Mulai Dari Rp6.000</div>
+    
+        <div class="features">
+          <span>Full Garansi</span>
+          <span>Tersedia Berbagai Negara</span>
+          <span>Cocok Untuk Sender Bot</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20tanya%20Nomor%20Kosong%20Telegram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TANYA ADMIN
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="other">
+        <span class="badge">LARIS</span>
+    
+        <div class="product-icon">
+          <i data-lucide="boxes"></i>
+        </div>
+    
+        <h3>Jasa Bugs</h3>
+    
+        <div class="price">Mulai Dari Rp5.000</div>
+    
+        <div class="features">
+          <span>Harga Sesuai Kebutuhan</span>
+          <span>Detail Melalui Admin</span>
+          <span>Proses Sesuai Kesepakatan</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20konsultasi%20Jasa%20Bug"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          KONSULTASI ADMIN
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="other">
+        <span class="badge">LARIS</span>
+    
+        <div class="product-icon">
+          <i data-lucide="boxes"></i>
+        </div>
+    
+        <h3>Jasa Pembuatan Website</h3>
+    
+        <div class="price">Mulai Dari Rp25.000</div>
+    
+        <div class="features">
+          <span>Desain Sesuai Kebutuhan</span>
+          <span>Tampilan Responsif</span>
+          <span>Harga Sesuai Tingkat Kesulitan</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20konsultasi%20Jasa%20Website"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          KONSULTASI ADMIN
+        </a>
+      </article>
+    
+    
+      <article class="product" data-category="other">
+        <div class="product-icon">
+          <i data-lucide="boxes"></i>
+        </div>
+    
+        <h3>Bantuan Project</h3>
+    
+        <div class="price">Mulai Dari Rp10.000</div>
+    
+        <div class="features">
+          <span>Bantuan Sesuai Project</span>
+          <span>Harga Sesuai Tingkat Kesulitan</span>
+          <span>Konsultasi Terlebih Dahulu</span>
+        </div>
+    
+        <a
+          class="order"
+          href="https://wa.me/62895392338445?text=Halo%20Admin,%20saya%20ingin%20konsultasi%20Bantuan%20Project"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          KONSULTASI ADMIN
+        </a>
+      </article>
+    
+    </div>
+
+  </div>
+
+</div>
+
+<!-- =========================
+     WHATSAPP FLOAT
+========================== -->
+
+<a
+  class="wa-float"
+  href="https://wa.me/62895392338445"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Hubungi Admin melalui WhatsApp"
+>
+  💬
+</a>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+  © 2026 RidzyXD Official Store.
+  All Rights Reserved.
+
+  <br>
+
+  Made By RidzyXD Official
+
+</footer>
+
+
+<!-- =========================
+     LUCIDE ICON
+========================= -->
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+
+<!-- =========================
+     JAVASCRIPT WEBSITE
+========================= -->
+
+<script>
+
+function showCategory(category, button) {
+
+  const products =
+    document.querySelectorAll(
+      ".product"
+    );
+
+  const categoryTitle =
+    document.getElementById(
+      "categoryTitle"
+    );
+
+  const categoryDescription =
+    document.getElementById(
+      "categoryDescription"
+    );
+
+
+  /* Menghapus status aktif */
+
+  document
+    .querySelectorAll(
+      ".catalog-tab"
+    )
+    .forEach(
+      tab => {
+
+        tab.classList.remove(
+          "active"
+        );
+
+      }
+    );
+
+
+  /* Memberikan status aktif */
+
+  if (button) {
+
+    button.classList.add(
+      "active"
+    );
+
+  }
+
+
+  /* Data kategori */
+
+  const categoryData = {
+
+    panel: {
+
+      title:
+        "Panel Pterodactyl",
+
+      description:
+        "Hosting bot dan game dengan performa stabil serta harga terjangkau. Pilih varian:"
+
+    },
+
+
+    bot: {
+
+      title:
+        "Sewa Bot WhatsApp",
+
+      description:
+        "Pilih durasi sewa bot sesuai kebutuhan kamu."
+
+    },
+
+
+    editor: {
+
+      title:
+        "Jasa Editor",
+
+      description:
+        "Berbagai layanan editing sesuai kebutuhan."
+
+    },
+
+
+    premium: {
+
+      title:
+        "Layanan Premium",
+
+      description:
+        "Pilih layanan premium yang tersedia."
+
+    },
+
+
+    game: {
+
+      title:
+        "Produk Game",
+
+      description:
+        "Berbagai produk dan layanan game."
+
+    },
+
+
+    digital: {
+
+      title:
+        "Produk Digital",
+
+      description:
+        "Template dan produk digital siap digunakan."
+
+    },
+
+
+    sosmed: {
+
+      title:
+        "Sosial Media",
+
+      description:
+        "Layanan untuk kebutuhan sosial media."
+
+    },
+
+
+    other: {
+
+      title:
+        "Layanan Lainnya",
+
+      description:
+        "Berbagai produk dan layanan tambahan."
+
+    }
+
+  };
+
+
+  /* Menghentikan fungsi
+     jika kategori tidak ada */
+
+  if (!categoryData[category]) {
+
+    return;
+
+  }
+
+
+  /* Mengubah judul */
+
+  if (categoryTitle) {
+
+    categoryTitle.innerHTML =
+
+      "<span>" +
+
+      categoryData[
+        category
+      ].title +
+
+      "</span>";
+
+  }
+
+
+  /* Mengubah deskripsi */
+
+  if (categoryDescription) {
+
+    categoryDescription.textContent =
+
+      categoryData[
+        category
+      ].description;
+
+  }
+
+
+  /* Menampilkan produk */
+
+  products.forEach(
+    product => {
+
+      if (
+
+        product.dataset.category
+        === category
+
+      ) {
+
+        product.classList.remove(
+          "hide"
+        );
+
+      } else {
+
+        product.classList.add(
+          "hide"
+        );
+
+      }
+
+    }
+  );
+
+
+  /* Memuat ulang ikon */
+
+  if (
+
+    typeof lucide !==
+    "undefined"
+
+  ) {
+
+    lucide.createIcons();
+
+  }
+
+}
+
+
+/* =========================
+   MEMBUKA KATALOG
+========================= */
+
+function bukaKatalog() {
+
+  const homePage =
+
+    document.getElementById(
+      "home-page"
+    );
+
+
+  const catalogPage =
+
+    document.getElementById(
+      "catalog-page"
+    );
+
+
+  if (homePage) {
+
+    homePage.style.display =
+      "none";
+
+  }
+
+
+  if (catalogPage) {
+
+    catalogPage.classList.add(
+      "active"
+    );
+
+  }
+
+
+  showCategory(
+
+    "panel",
+
+    document.querySelector(
+      '.catalog-tab[data-category="panel"]'
+    )
+
+  );
+
+
+  window.scrollTo({
+
+    top: 0,
+
+    behavior: "smooth"
+
+  });
+
+}
+
+
+/* =========================
+   KEMBALI KE BERANDA
+========================= */
+
+function kembaliKeBeranda() {
+
+  const homePage =
+
+    document.getElementById(
+      "home-page"
+    );
+
+
+  const catalogPage =
+
+    document.getElementById(
+      "catalog-page"
+    );
+
+
+  if (catalogPage) {
+
+    catalogPage.classList.remove(
+      "active"
+    );
+
+  }
+
+
+  if (homePage) {
+
+    homePage.style.display =
+      "block";
+
+  }
+
+
+  window.scrollTo({
+
+    top: 0,
+
+    behavior: "smooth"
+
+  });
+
+}
+
+
+/* =========================
+   SAAT WEBSITE DIMUAT
+========================= */
+
+document.addEventListener(
+
+  "DOMContentLoaded",
+
+  function () {
+
+    if (
+
+      typeof lucide !==
+      "undefined"
+
+    ) {
+
+      lucide.createIcons();
+
+    }
+
+
+    const activeTab =
+
+      document.querySelector(
+        ".catalog-tab.active"
+      );
+
+
+    if (activeTab) {
+
+      showCategory(
+
+        activeTab.dataset.category,
+
+        activeTab
+
+      );
+
+    }
+
+  }
+
+);
+
+</script>
+
+</body>
+
+  </html>
